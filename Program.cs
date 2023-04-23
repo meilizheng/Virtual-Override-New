@@ -17,8 +17,13 @@
 
             SavingAccount saving = new SavingAccount("Claire", 2000); //created a new instance for saving account;
             Console.WriteLine(saving);  //display balance;
-            saving.Deposit(1000);   //call deposit method;
+            saving.Deposit(1000);
+            saving.Withdraw(4000);//call deposit method;
             Console.WriteLine("Current balance: $" + saving.Balance + "\n"); //display current balance;
+
+            RetirementAccount retirement = new RetirementAccount("Meili", 5000);
+            retirement.Withdraw(500);
+            Console.WriteLine( retirement.Name + "  Current balance: " + retirement.Balance + "\n");
         }   
     }
 }

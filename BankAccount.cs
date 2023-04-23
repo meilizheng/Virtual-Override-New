@@ -52,7 +52,7 @@ namespace Virtual_Override_New
        
         public override string ToString() //use override to string display result;
         {
-            return GetType().Name + $"  {_Name} Balance: ${_Balance}";
+            return GetType().Name + $" Name: {_Name} Balance: ${_Balance}";
         }
     }
 }
