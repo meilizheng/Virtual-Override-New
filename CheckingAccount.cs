@@ -11,7 +11,7 @@ namespace Virtual_Override_New
     {
         double _OverdraftFee;
 
-        public CheckingAccount(string name, double balance, double overdraftFee = 0) : base(name, balance)
+        public CheckingAccount(string name, double balance, double overdraftFee = 50) : base(name, balance)
         {
             _OverdraftFee = overdraftFee;
         }
