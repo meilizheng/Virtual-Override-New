@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            BankAccount bankAccount = new BankAccount("Meili Zheng", 1000); //created a new instance for bankaccount
+            Abstract.BankAccount bankAccount = new CheckingAccount("Meili Zheng", 1000); //created a new instance for bankaccount
             Console.WriteLine(bankAccount); //display bankaccount balance;
             bankAccount.Deposit(-500); //call deposit method;
             bankAccount.Withdraw(10000); //call withdraw method;
