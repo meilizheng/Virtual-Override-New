@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Abstract;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,21 @@ namespace Virtual_Override_New
     {
         double _OverdraftFee;
 
-        public CheckingAccount(string name, double balance, double overdraftFee = 50) : base(name, balance) //created constructor base on parent class add overdraftfee in;
+        public CheckingAccount(string name, double balance, double overdraftFee = 0) : base(name, balance)
         {
-            _OverdraftFee = overdraftFee;            
+            _OverdraftFee = overdraftFee;
+        }
+
+        public override void Deposit(double amount)
+        {
+            if (amount > 0)
+            {
+                Balance += amount;
+            }
+            else
+            {
+                Console.WriteLine("please check you deposit amount.");
+            }
         }
 
         public override void Withdraw(double amount) //created withdraw method based on parent class bankaccount;
