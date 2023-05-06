@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Abstract;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,14 @@ namespace Virtual_Override_New
         public RetirementAccount(string name, double balance) : base(name, balance)
         {
            
+        }
+
+        public override void Deposit(double amount)
+        {
+            if (amount > 0)
+            {
+                Balance += amount;
+            }
         }
 
         public override void Withdraw(double amount)
